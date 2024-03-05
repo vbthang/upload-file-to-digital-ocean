@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="color: brown;">Upload data</h1>
+  <form action="/get-data" method="post" target="_blank">
+    <input id="song_id" name="song_id" placeholder="Enter Song Id"/>
+    <button type="submit">Get Song</button>
+    <button type="button" onclick=upload()>Upload Files</button>
+  </form>
+
+  <script>
+const upload = () => {
+  const id = document.getElementById('song_id').value;
+  const newTab = window.open('', '_blank');
+  if (newTab) {
+    newTab.location.href = '/upload?id=' + id;
+  }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "upload-file-to-digital-ocean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1569.0",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0",
+    "pug": "^3.0.2"
+  }
+}
