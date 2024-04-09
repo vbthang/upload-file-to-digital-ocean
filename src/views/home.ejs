@@ -6,12 +6,25 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 style="color: brown;">Upload data</h1>
+  <!-- <h1 style="color: brown;">Upload data</h1>
   <form action="/get-data" method="post" target="_blank">
     <input id="song_id" name="song_id" placeholder="Enter Song Id"/>
     <button type="submit">Get Song</button>
     <button type="button" onclick=upload()>Upload Files</button>
-  </form>
+  </form> -->
+
+  <h1>Playlist Items</h1>
+  <select>
+    <% allItems.forEach(item => { %>
+      <option value="<%= item.thumbnail %>"><%= item.title %></option>
+    <% }); %>
+  </select>
+  
+
+
+
+
+
 
   <script>
 const upload = () => {

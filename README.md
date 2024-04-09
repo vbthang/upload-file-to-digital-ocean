@@ -1,55 +1,18 @@
-# Base ExpressJS
+### CREATE PLAYLIST FOR SOULSOUND
 
-Base ExpressJS is a basic source code, using Express FrameWork
+1. Clone project & `npm i`
+2. Create file `.env` and insert data (Thắng gửi)
+3. Run project `npm run dev` & App will run on port `localhost:8001`
+4. Access `localhost:8001\playlist`
+5. Save image to `src/uploads` and set name clearly
+6. Choose category
+  ![Alt Text](./image/select-category.png)
 
-## Usage
+7. Fill field 
+  - Bắt buộc tên ảnh khi nhập vào phải cùng tên với file ảnh đã lưu trong `src\uploads`
+  - Title không được trùng ( hiện trong playlist exists)
+  ![Alt Text](./image/fill-field.png)
 
-1. Clone project
-2. Create `.env` file and config in `.env`:
-
--   Config Digital Ocean
-
-```bash
-DO_SPACES_ENDPOINT=
-DO_SPACES_KEY=
-DO_SPACES_SECRET=
-DO_SPACES_NAME=
-DO_DOMAIN=
-DO_FILE_SONG=
-DO_FILE_THUMBNAIL=
-DO_FILE_LYRIC=
-```
-
--   Config Project
-
-```bash
-DEV_PORT=
-SERVER_API=
-```
-
-3. Install package & setup
-
-```bash
-npm install
-```
-
-4. Run project
-```bash
-npm run dev
-```
-
-5. Click to link in log of terminal -> access from browser
-
-6. Copy song's id => paste field
-
-7. Press '<b>Get song</b>' to get detail for song
-
-8. Download 4 path to /src/uploads with name:
-```bash
-  __id__.mp3
-  __id__x96.jpg
-  __id__x240.jpg
-  __id__.lrc
-```
-
-9. Press '<b>Upload file</b>' and watch log in terminal to know status of file.
+8. Press `UPLOADS` and wait
+  - Hãy đợi cho tới khi nhận được thông báo thành công | thất bại
+  ![Alt Text](./image/done.png)

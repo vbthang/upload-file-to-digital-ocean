@@ -1,25 +1,26 @@
+'use strict'
+
+const path = require('path');
 const express = require('express')
 const dotenv = require('dotenv')
-const { getDataFromAPI, uploadDataToDO } = require('./src/controllers/data.controller')
 
 const app = express()
-app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 dotenv.config()
 
-const port = process.env.DEV_PORT || 8000
+const port = process.env.DEV_PORT || 8001
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', './src/views/')
 app.set('view engine', 'ejs')
 
-app.get('/upload', uploadDataToDO)
+// USING MONGODB
+require('./src/dbs/init.mongodb')
 
-app.post('/get-data', getDataFromAPI)
-
-app.get('/', (req, res, next) => {
-  res.render('home.ejs')
-})
-
+// ROUTE PLAYLIST
+app.use('', require('./src/route'))
 
 app.listen(port, () => {
   console.log(`App run on http://localhost:${port}`)
